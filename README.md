@@ -3,5 +3,6 @@
 ```
 git clone https://github.com/wiseleyb/rails-new-docker.git
 chmod 755 entrypoint.sh
-docker compose run --no-deps web rails new rtest --force --skip-git --database=postgresql
+dcup --build
+docker compose run --no-deps web rails _6.1.7.4_ new rtest --force --skip-git --database=postgresql
 ```
