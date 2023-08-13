@@ -1,4 +1,4 @@
-FROM ruby:3.2.2-slim
+FROM ruby:2.6.6
 
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
     git \
@@ -14,7 +14,7 @@ ENV LANG=C.UTF-8 \
     BUNDLE_JOBS=4 \
     BUNDLE_RETRY=3
   
-RUN gem update --system && gem install bundler
+RUN gem update --system && gem install bundler && gem install rails -v 5.2.8.1
 
 WORKDIR /usr/src/app
 
